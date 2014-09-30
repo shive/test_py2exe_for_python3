@@ -2,7 +2,7 @@
 #==============================================================================
 
 CURL = curl
-PYTOHN = python
+PYTHON = python
 
 .PHONY: clean run
 
