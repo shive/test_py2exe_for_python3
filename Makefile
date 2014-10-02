@@ -18,9 +18,11 @@ hello: .bin/hello/hello.exe
 	$<
 
 .bin/msgbox/msgbox.exe: msgbox.py .virtualenv/Scripts/python.exe
+	/usr/bin/mkdir -p .bin/msgbox
 	$(BUILD_EXE) --bundle-files=3 --dest=.bin/msgbox $<
 
 .bin/hello/hello.exe: hello.py .virtualenv/Scripts/python.exe
+	/usr/bin/mkdir -p .bin/hello
 	$(BUILD_EXE) --bundle-files=0 --dest=.bin/hello $<
 
 .virtualenv/Scripts/python.exe: .packages/pywin32-219.win-amd64-py3.4.exe .packages/py2exe-0.9.2.0-py33.py34-none-any.whl .packages/PySide-1.2.2-cp34-none-win_amd64.whl

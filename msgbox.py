@@ -3,14 +3,8 @@
 #======================================================================================================================
 
 import sys
-import PySide
-from PySide.QtCore import *
-from PySide.QtGui import *
+from msgbox_implement import msgbox
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    msgbox = QMessageBox()
-    msgbox.setText('‚Ù‚°‚Ù‚° ‚Ù‚°‚Ù‚° ‚Ù‚°‚Ù‚°')
-    msgbox.show()
-    sys.exit(app.exec_())
+    sys.exit(msgbox())
 
