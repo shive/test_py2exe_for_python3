@@ -1,0 +1,42 @@
+usage: build_exe.py [-h] [-i modname] [-x modname] [-p package_name] [-O] [-s]
+                    [-r] [-f modname] [-v] [-c] [-d DESTDIR] [-l LIBNAME]
+                    [-b {0,1,2,3}] [-W setup_path] [-svc service]
+                    [script [script ...]]
+
+Build runtime archive for a script
+
+positional arguments:
+  script
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i modname, --include modname
+                        module to include
+  -x modname, --exclude modname
+                        module to exclude
+  -p package_name, --package package_name
+                        module to exclude
+  -O, --optimize        use optimized bytecode
+  -s, --summary         print a single line listing how many modules were
+                                                found and how many modules are missing
+  -r, --report          print a detailed report listing all found modules,
+                                                the missing modules, and which module imported them.
+  -f modname, --from modname
+                        print where the module <modname> is imported.
+  -v
+  -c, --compress
+  -d DESTDIR, --dest DESTDIR
+                        destination directory
+  -l LIBNAME, --library LIBNAME
+                        relative pathname of the python archive
+  -b {0,1,2,3}, --bundle-files {0,1,2,3}
+                        How to bundle the files:
+                          3 - create script.exe, python.dll, extensions.pyd, others.dll.
+                          2 - create script.exe, python.dll, others.dll.
+                          1 - create script.exe, others.dll.
+                          0 - create script.exe.
+  -W setup_path, --write-setup-script setup_path
+                        Do not build the executables; instead write a setup script that allows
+                        further customizations of the build process.
+  -svc service, --service service
+                        Build a service
